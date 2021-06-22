@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--日志开启-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--定义别名-->
+    <typeAliases>
+        <!--
+            第一种方式
+            <typeAlias type="com.musiven.entity.Student" alias="student"/>
+        -->
+        <!--第二种方式-->
+        <package name="com.musiven.settings.domain"/>
+    </typeAliases>
+    <mappers>
+        <!--
+        <mapper resource="mappers/*.xml"/>
+            这种方式的Dao接口和XML要放在同一目录下
+        -->
+        <package name="com.musiven.settings.dao"/>
+
+    </mappers>
+</configuration>
